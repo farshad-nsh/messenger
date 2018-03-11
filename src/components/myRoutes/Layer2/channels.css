@@ -1,0 +1,63 @@
+.row:after {
+  display: block;
+  clear: both;
+  content: ''; }
+
+.row {
+  background-color: #a5571b;
+  position: absolute;
+  width: 90%;
+  height: 100%;
+  left: 150px;
+  top: 0px;
+  font-family: "Arial Black";
+  color: #aa8718; }
+  .row + .row {
+    margin-top: 3%; }
+
+[class^="col-"] {
+  float: left;
+  margin-right: 3%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+  [class^="col-"]:last-child {
+    margin-right: 0%; }
+
+.col-1 {
+  width: 4.75%; }
+
+.col-2 {
+  width: 12.5%; }
+
+.col-3 {
+  width: 20.25%; }
+
+.col-4 {
+  width: 28%; }
+
+.col-5 {
+  width: 35.75%; }
+
+.col-6 {
+  width: 43.5%; }
+
+.col-7 {
+  width: 51.25%; }
+
+.col-8 {
+  width: 59%; }
+
+.col-9 {
+  width: 66.75%; }
+
+.col-10 {
+  width: 74.5%; }
+
+.col-11 {
+  width: 82.25%; }
+
+.col-12 {
+  width: 90%; }
+
+/*# sourceMappingURL=channels.css.map */

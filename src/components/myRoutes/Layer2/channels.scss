@@ -1,0 +1,48 @@
+
+//----- Extends
+%clearfix:after {
+  display:block;
+  clear:both;
+  content:'';
+}
+//----- Grid System
+$grid-spacing:3%;
+$width-row:90%;
+.row {
+  background-color: #a5571b;
+  position: absolute;
+  width:$width-row;
+  height: 100%;
+  left:150px;
+  top:0px;
+  font-family: "Arial Black";
+  color: rgb(170, 135, 24);
+  @extend %clearfix;
+  & + & {
+    margin-top:$grid-spacing;
+  }
+}
+[class^="col-"] {
+  float:left;
+  margin-right:$grid-spacing;
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  box-sizing:border-box;
+  &:last-child {
+    margin-right:0%;
+  }
+}
+
+//----- Columns (Automatic)
+.col-1   { width:($width-row / 12) - ($grid-spacing * 11 / 12); }
+.col-2   { width:($width-row / 6) - ($grid-spacing * 10 / 12); }
+.col-3   { width:($width-row / 4) - ($grid-spacing * 9 / 12); }
+.col-4   { width:($width-row / 3) - ($grid-spacing * 8 / 12); }
+.col-5   { width:($width-row / 2.4) - ($grid-spacing * 7 / 12); }
+.col-6   { width:($width-row/ 2) - ($grid-spacing * 6 / 12); }
+.col-7   { width:($width-row / 1.714285714285714) - ($grid-spacing * 5 / 12); }
+.col-8   { width:($width-row / 1.5) - ($grid-spacing * 4 / 12); }
+.col-9   { width:($width-row / 1.333333333333333) - ($grid-spacing * 3 / 12); }
+.col-10  { width:($width-row / 1.2) - ($grid-spacing * 2 / 12); }
+.col-11  { width:($width-row / 1.090909090909091) - ($grid-spacing * 1 / 12); }
+.col-12  { width:$width-row; }
